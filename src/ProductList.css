@@ -2,6 +2,10 @@
 body, h1, ul {
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;
+    
 }
 
 /* Set a background color */
@@ -163,6 +167,7 @@ body {
 .cart{
     color: white;
     display: flex;
+    position: relative;
 }
 .cart_quantity_count{
     margin-top: 16px;
@@ -172,6 +177,17 @@ body {
     font-size: 29px;
 
 }
+
+.cart-counter {
+    position: absolute;
+    top: 50%;       /* Positioning the counter at the center vertically */
+    left: 50%;      /* Positioning the counter at the center horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the positioning to be perfectly centered */
+    font-size: 24px; /* Adjust size based on preference */
+    color: white; /* Foreground color for the counter */
+    font-weight: bold;
+    z-index: 1; /* Ensures the counter is on top of the cart icon */
+  }
 .plantname_heading{
    display: flex;
    align-items: center;
@@ -185,7 +201,7 @@ body {
     border: 1px solid rgb(5, 4, 4);
     border-left: none;
     border-right: none;
-
+    
     
 }
 /* Add Media Query for responsiveness */
